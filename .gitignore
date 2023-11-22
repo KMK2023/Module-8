@@ -1,0 +1,14 @@
+# Included so that when git is running, it will ignore the following
+
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# vscode
+.vscode/
+
+# macOS
+.DS_Store
