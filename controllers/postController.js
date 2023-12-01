@@ -7,7 +7,7 @@ const Models = require("../models");
 // To get any post with find all inside the models, within the post
 const getPost = (res) => {
     Models.Posts.findAll({}).then(function (data) {
-        res.send({result: 200 , data: data})
+        res.send(data)
     }).catch(err => {
         throw err
     })
@@ -15,7 +15,7 @@ const getPost = (res) => {
 // To create a new post inside the models, within the post
 const createPost = (data, res) => {
     Models.Posts.create(data).then(function (data) {
-        res.send({ result: 200 , data: data})
+        res.send(data)
     }).catch(err => {
         throw err
     })
@@ -24,7 +24,7 @@ const createPost = (data, res) => {
 // To get any post with a specific ID inside the models, within the post
 const getPostById = (id, res) => {
     Models.Posts.findOne({where: {id: id}}).then(function (data) {
-        res.send({ result: 200 , data: data})
+        res.send(data)
     }).catch(err => {
         throw err
     })
