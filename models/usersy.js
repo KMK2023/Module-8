@@ -3,9 +3,9 @@ const dbConnect = require("../dbConnect");
 
 const sequelizeInstance = dbConnect.Sequelize;
 
-class user extends Model {}
+class usery extends Model {}
 
-user.init(
+usery.init(
   {
     Name: { type: DataTypes.STRING, allowNull: false, required: true },
     email: { type: DataTypes.STRING, allowNull: false, required: true },
@@ -13,10 +13,10 @@ user.init(
   },
   {
     sequelize: sequelizeInstance,
-    modelName: "user",
+    modelName: "usery",
     timestamps: true,
     freezeTableName: true,
   }
 );
 
-module.exports = user;
+module.exports = usery;

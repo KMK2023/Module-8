@@ -3,6 +3,8 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
+
+// Connect to MySQL
 const dbConnect = require("./dbConnect");
 dbConnect.connectMysql();
 
@@ -13,11 +15,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
+// Import routes after connecting to the database
 let postRoutes = require("./routes/postRoutes");
 app.use("/api/posts", postRoutes);
 
-let usersRoutes = require("./routes/usersRoutes");
-app.use("/api/users", usersRoutes);
+let usersyRoutes = require("./routes/usersyRoutes");
+app.use("/api/usersy", usersyRoutes);
 
 app.listen(port, () => {
   console.log("Listening on port ", port);

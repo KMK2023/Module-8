@@ -2,5 +2,5 @@
 
 module.exports = {
   postController: require("./postController"),
-  usersController: require("./usersController"),
+  usersController: require("./usersyController"),
 };

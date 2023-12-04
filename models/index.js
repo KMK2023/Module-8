@@ -1,15 +1,15 @@
 "use strict";
-const Users = require("./users");
+const Usersy = require("./usersy");
 const Posts = require("./posts");
 
 async function init() {
   await Posts.sync();
-  await Users.sync();
+  await Usersy.sync();
 }
 
 init();
 
 module.exports = {
   Posts,
-  Users,
+  Usersy,
 };
